@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .headc{
+        height: 100px;
+        width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .xe{
+        font-size: 30px;
+        color: #1DC091;
+        font-family: 幼圆;
+        font-weight: 600;
+    }
+    .biaozhi{
+        width: 40px;
+        height: 40px;
+        
+    }
+    .touxiang{
+        width: 60px;
+        height: 50px;
+        
+    }
+    .xb{
+        width: 150px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .xxb{
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #666666;
+        font-size: 20px;
+        text-align: center;
+    }
+    .xxb:hover{
+        border-top: red solid 6px;
+        color: red;
+    }
+    .search-box{
+        margin-left: 100px;
+        width: 370px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+    .search{
+        height: 30px;
+        border: 3px solid red;
+    }
+    .search input{
+        height: 25px;
+        width: 250px;
+        
+    }
+    .setu{
+        height: 36px;
+        width: 60px;
+        position: relative;
+        padding-left: 20px;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+    }
+    .quan{
+        background-color: red;
+        width: 23px;height: 23px;
+        border-radius: 100%;
+        border:2px solid white;
+    }
+    .quan:after{
+    content: "";
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width:10px;
+    height: 2px;
+    position: absolute;
+    top:23px;
+    left:43px;
+    background-color: white;
+    }
+    .tuichu{
+        background-color: #1DC091;
+        color: white;
+        width: 100px;
+        height: 40px;
+        margin-left: 15px;
+        font-size: 15px;
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 2000px;
+        background-color:#F4F4F4;
+        padding-bottom: 60px;
+    }
+    .datu{
+        width: 1100px;
+    }
+    .box1,.box2,.box3{
+        display: flex;
+        width: 1100px;
+        height: 600px;
+        margin-bottom: 20px;
+        background-color: white;
+    }
+    .box1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cirs{
+        width: 900px;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .cir{
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        border: 2px solid #20C193;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .zi{
+        color: #20C193;
+        font-size: 50px;
+        font-weight: 100;
+    }
+    .list{
+        width: 1000px;
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .subject{
+        width: 200px;
+        padding-left: 50px;
+        padding-right: 30px;
+        border-right: #EAEAEA solid 1px;
+    }
+    .list>:nth-child(4){
+        border-right: none;
+    }
+    .listcontent{
+        color: #7C7C7C;
+    }
+    .listcontent:hover{
+        color: red;
+    }
+    .lite{
+        font-size: 13px;
+    }
+    .cqs{
+        padding-top: 50px;
+        width: 820px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .chaquan{
+        width: 40px;height: 40px;
+        border-radius: 20px;
+        border:1px solid #20C193;
+        position: relative;
+    }
+    .hen,.shu{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+    }
+    .hen{
+        top: -20px;
+        border-bottom:#77D9BD 1px solid ;
+    }
+    .shu{
+        left: -20px;
+        border-right: #77D9BD 1px solid;
+    }
+    .box3,.box2{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .paihang{
+        display: flex;
+        flex-direction: column;
+    }
+    .hang1,.hang2{
+        display: flex;
+        justify-content: center;
+    }
+    .hang2{
+        position: relative;
+        top: -3px;
+    }
+    .kebox,.num{
+        width: 160px;
+        height: 100px;
+        padding-top: 40px;
+    }
+    .kebox{
+        border: #1DC091 3px solid;
+        text-align: center;
+    }
+    .kebox:hover{
+        background-color: #1DC091;
+        color: white;
+    }
+    .num{
+        text-align: center;
+        color: red;
+        font-size: 55px;
+        font-weight: 200;
+        text-decoration: underline;
+    }
+    .top{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .caini{
+        padding-top: 60px;
+        font-size: 25px;
+        color: #666666;
+    }
+    .genju{
+        color: #42CBA3;
+    }
+    .lbox{
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+        width: 200px;
+        height: 100px;
+        background-color:#F77B72;
+        position: relative;
+        overflow: hidden;
+    }
+    .lbox:hover{
+        background-color: red;
+    }
+    .book,.author{
+        text-align: center;
+        color: white;
+        font-weight: 100;
+    }
+    .book{
+        font-size: 20px;
+    }
+    .lbox img{
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        top: -50px;
+        left: 65px;
+    }
+    .lbox:hover{
+        overflow: visible;
+    }
+    .foot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        width: 100%;
+        height: 90px;
+        background-color: #333333;
+    }
+    .creator{
+       display: flex;
+        align-items: center;
+       justify-content: space-around;    
+    }
+    .name{
+        color:#9B9B9B;
+        font-size: 12px;
+        width: 200px;
+    }
+    .creator>:nth-child(1){
+        text-align: end;
+    }
+    .red{
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 3px;
+        height: 10px;
+        background-color: red;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="headc">
+            <img src="./xueertu.png" alt="" class="biaozhi">
+                <div class="xe">学而</div>
+            <div class="xb"><div class="xxb">首页</div></div>
+            <div class="xb"><div class="xxb">分类查看</div></div>
+            <div class="search-box">
+                <div class="search"><input type="text"></div>
+            <a href="#" class="setu"><div class="quan"></div></a>
+            </div>
+             <img src="./touxiang.png" alt="" class="touxiang">
+                <button class="tuichu">退出</button>
+    </div>
+    
+    <div class="body">
+        <img src="./datu.png" alt="" class="datu">
+        <div class="box1">
+            <div class="cirs">
+                <div class="cir"><div class="zi">公</div></div>
+                <div class="cir"><div class="zi">通</div></div>
+                <div class="cir"><div class="zi">素</div></div>
+                <div class="cir"><div class="zi">专</div></div>
+            </div>
+            <div class="list">
+                <ul class="subject">
+                    <li class="listcontent">界面与设计应用<br><span class="lite">房子</span></li>
+                    <li class="listcontent">Java程序编程<br><span class="lite">赵三金</span></li>
+                    <li class="listcontent">设计师的自我修养<br><span class="lite">分享课程</span></li>
+                </ul>
+                <ul class="subject">
+                    <li class="listcontent">计算机基础<br><span class="lite">胡薇</span></li>
+                    <li class="listcontent">植物观赏学基础<br><span class="lite">韩一尾</span></li>
+                    <li class="listcontent">生活常识101<br><span class="lite">分享</span></li>
+                </ul>
+                <ul class="subject">
+                    <li class="listcontent">新生引导课堂<br><span class="lite">开学季</span></li>
+                    <li class="listcontent">党课精神研讨课<br><span class="lite">分享课程</span></li>
+                    <li class="listcontent">专业方向<br><span class="lite">毕业生</span></li>
+                </ul>
+                <ul class="subject">
+                    <li class="listcontent">影视广告摄影基础<br><span class="lite">分享课程</span></li>
+                    <li class="listcontent">程序员的养成<br><span class="lite">赵多金</span></li>
+                    <li class="listcontent">如何让设计师改稿<br><span class="lite">甲方</span></li>
+                </ul>
+            </div>    
+            <div class="cqs">
+                <div class="chaquan"><di class="hen"></di><div class="shu"></div></div>
+                <div class="chaquan"><di class="hen"></di><div class="shu"></div></div>
+                <div class="chaquan"><di class="hen"></di><div class="shu"></div></div>
+                <div class="chaquan"><di class="hen"></di><div class="shu"></div></div>
+            </div>
+            
+        </div>
+        <div class="box2">
+            <div class="top">
+                <span class="caini">最热课程动态</span>
+                <span class="genju">精心为您推荐最佳口碑课程排行No1.-No5</span>
+            </div>
+            <div class="paihang">
+                <div class="hang1">
+                    <div class="kebox">常勇<br>《化学生活》</div>
+                    <div class="num">02</div>
+                    <div class="kebox">张勇<br>《java语言程序<br>设计》</div>
+                    <div class="num">04</div>
+                    <div class="kebox">张国<br>《计算机组装》</div>
+                </div>
+                <div class="hang2">  
+                    <div class="num">01</div>
+                    <div class="kebox">李达<br>《大学生语文》</div>
+                    <div class="num">03</div>
+                    <div class="kebox">苏燕<br>《视觉语言》</div>
+                    <div class="num">05</div>
+                </div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="top">
+                <span class="caini">猜你喜欢课程</span>
+                <span class="genju">根据你的浏览记录，推荐相似的课程列表</span>
+            </div>
+                <div class="lbox">
+                    <img src="./rabbit.png" alt="">
+                    <span class="book">《毛泽东思想》</span>
+                    <span class="author">赵三金</span>
+                </div>
+                <div class="lbox">
+                    <img src="./rabbit.png" alt="">
+                    <span class="book">《邓小平理论》</span>
+                    <span class="author">胡一薇</span>
+                </div>
+                <div class="lbox">
+                    <img src="./rabbit.png" alt="">
+                    <span class="book">《科学发展观》</span>
+                    <span class="author">梁非凡</span>
+                </div>
+                <div class="lbox">
+                    <img src="./rabbit.png" alt="">
+                    <span class="book">《三个代表》</span>
+                    <span class="author">韩一尾</span>
+                </div>
+            </div>
+    </div>
+    <div class="foot">
+        <img src="./blackrabbit.png" alt="">
+        <div class="creator"><span class="name"> M U X I   S T U D I O </span> <div class="red"></div> <span class="name"> 华中师范大学木犀团队</span></div>
+    </div>
+</body>
+</html>
